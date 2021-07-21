@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 809c32a61016a4da29a22c8ee28280a9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1422184923334757970
+    second: SD_NC_Cookies_1_0
+  - first:
+      213: 1808195818850983521
+    second: SD_NC_Cookies_1_1
+  - first:
+      213: -7900951133411543555
+    second: SD_NC_Cookies_1_2
+  - first:
+      213: -7398325283844340781
+    second: SD_NC_Cookies_1_3
+  - first:
+      213: 2267071060405275165
+    second: SD_NC_Cookies_1_4
+  - first:
+      213: -7015292045520539579
+    second: SD_NC_Cookies_1_5
+  - first:
+      213: -675344402919758444
+    second: SD_NC_Cookies_1_6
+  - first:
+      213: 3547489320769246608
+    second: SD_NC_Cookies_1_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,213 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 623
+        width: 167
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3be48f1c774411dbc7916a3856ccc6
+      internalID: 1422184923334757970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 624
+        width: 277
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c15fcf8bb2ec4440978cc6342545db6
+      internalID: 1808195818850983521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 623
+        width: 271
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9caeb61528fd741a1a4055ace73f65d4
+      internalID: -7900951133411543555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_3
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 623
+        width: 273
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31f1cb84c7434f13b643c2672f58853
+      internalID: -7398325283844340781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 224
+        width: 303
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94b11f62a1e949199b31a3f52527307
+      internalID: 2267071060405275165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_5
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 223
+        width: 296
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76ae75c7cc7947ab8518f447d3c5a1e
+      internalID: -7015292045520539579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_6
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 346
+        width: 395
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ce6adc65cb5426798be9cce5c02934
+      internalID: -675344402919758444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SD_NC_Cookies_1_7
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 5
+        width: 394
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd22cb4f308a4856b6295d8800ca559
+      internalID: 3547489320769246608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
