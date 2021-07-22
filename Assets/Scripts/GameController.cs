@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -25,7 +26,12 @@ public class GameController : MonoBehaviour
     public GameObject grid;
     public GameObject taskLabel;
 
+    public DataSource dataSource;
+
     public int level = 1;
+
+    public string currentTask = "";
+    public List<string> currentDataSet;
 
     public List<GameObject> cellsInScene = new List<GameObject>();
 
@@ -39,8 +45,23 @@ public class GameController : MonoBehaviour
         level = 1;
         cellsInScene = new List<GameObject>();
 
-
+        dataSource = Resources.Load<DataSource>("ScriptableObjects/DataSource");
         spritesSet = Resources.LoadAll<Sprite>("Sprites");
+
+        CreateTask();
+    }
+
+
+    public void CreateTask()
+    {
+        int dataSet = Random.Range(0, dataSource.dataSets.Length);
+
+        currentDataSet = new List<string>(dataSource.dataSets[dataSet].Split(','));
+        
+        currentTask = currentDataSet[Random.Range(0,currentDataSet.Count)];
+        currentDataSet.Remove(currentTask);
+
+        taskLabel.GetComponent<Text>().text = "Find " + currentTask;
     }
 
     public void IncreaseLevel()

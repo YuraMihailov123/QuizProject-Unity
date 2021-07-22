@@ -7,4 +7,6 @@ public class DataSource : ScriptableObject
 {
     
     public string[] dataSets;
+
+    public int[] dataSetsSizes;
 }
