@@ -85,6 +85,11 @@ public class GameController : MonoBehaviour
         currentTask = currentDataSet[Random.Range(0,currentDataSet.Count)];
         currentTaskIndex = currentDataSet.IndexOf(currentTask);
 
+        if (previousTasks.Count >= 8)
+        {
+            previousTasks.Clear();
+        }
+
         while (previousTasks.Contains(currentTask))
         {
             currentTask = currentDataSet[Random.Range(0, currentDataSet.Count)];
