@@ -15,7 +15,7 @@ public class OnSpriteClick : MonoBehaviour
     {
         myObject = transform.Find("object").gameObject;
         myParticleSystem = transform.Find("stars").GetComponent<ParticleSystem>();
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = new Vector3(0, 0, 0);
 
         if (myEvent == null)
             myEvent = new UnityEvent();
@@ -27,58 +27,24 @@ public class OnSpriteClick : MonoBehaviour
 
     IEnumerator BounceObject()
     {
-        float a = 0;
-        for(int i = 0; i < 12; i++)
-        {
-            a += 0.1f;
-            transform.localScale = new Vector3(a, a, a);
-            yield return null;
-            //yield return new WaitForSeconds(0.01f);
-        }
-        for (int i = 0; i < 2; i++)
-        {
-            a -= 0.1f;
-            transform.localScale = new Vector3(a, a, a);
-            yield return null;
-            //yield return new WaitForSeconds(0.01f);
-        }
+        transform.DOScale(1.2f, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        transform.DOScale(1, 0.2f);
     }
 
     IEnumerator BounceObjectWithCorrectTap()
     {
         myParticleSystem.Play();
-        float a = 1;
-        for (int i = 0; i < 10; i++)
-        {
-            a += 0.02f;
-            myObject.transform.localScale = new Vector3(a, a, a);
-            yield return null;
-            //yield return new WaitForSeconds(0.01f);
-        }
-        for (int i = 0; i < 20; i++)
-        {
-            a -= 0.02f;
-            myObject.transform.localScale = new Vector3(a, a, a);
-            yield return null;
-            //yield return new WaitForSeconds(0.01f);
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            a += 0.02f;
-            myObject.transform.localScale = new Vector3(a, a, a);
-            yield return null;
-            //yield return new WaitForSeconds(0.01f);
-        }
+        myObject.transform.DOScale(1.2f, 0.2f);
+        yield return new WaitForSeconds(0.2f);
+        myObject.transform.DOScale(0.8f, 0.2f);
+        yield return new WaitForSeconds(0.2f);
+        myObject.transform.DOScale(1.0f, 0.2f);
+        yield return new WaitForSeconds(0.2f);
 
         GameController.Instance.IncreaseLevel();
     }
 
-    IEnumerator EaseInBounce() {
-
-        
-        yield return new WaitForSeconds(0.5f);
-        myObject.transform.DOScale(1, 0.5f);
-    }
 
 
     void OnMouseDown()
@@ -90,12 +56,10 @@ public class OnSpriteClick : MonoBehaviour
     {
         if(GameController.Instance.currentTask == myObjectValue && GameController.Instance.isPlaying)
         {
-            Debug.Log("YEP!");
             StartCoroutine("BounceObjectWithCorrectTap");
         }else if (GameController.Instance.currentTask != myObjectValue && GameController.Instance.isPlaying)
         {
-            //StartCoroutine("EaseInBounce");
-            myObject.transform.DOShakePosition(1,0.35f);
+            myObject.transform.DOShakePosition(0.5f,0.25f);
         }
     }
 }

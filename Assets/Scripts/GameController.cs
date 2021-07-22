@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -140,35 +141,23 @@ public class GameController : MonoBehaviour
     IEnumerator ShowEndScreen()
     {
         fader.gameObject.SetActive(true);
-        float a = 0;
-        for(int i = 0; i < 10; i++)
-        {
-            a += 0.05f;
-            fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
-            yield return new WaitForSeconds(0.01f);
-        }
+        fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, 0);
+        fader.DOFade(0.5f, 0.5f);
+        yield return null;
     }
 
     IEnumerator CloseEndScreen()
     {
-        
-        float a = 0.5f;
-        for (int i = 0; i < 10; i++)
-        {
-            a -= 0.05f;
-            fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
-            yield return new WaitForSeconds(0.01f);
-        }
+
+        fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, 0.5f);
+        fader.DOFade(0, 0.5f);
+        yield return new WaitForSeconds(0.5f);
         fader.gameObject.SetActive(false);
 
         loader.gameObject.SetActive(true);
-        a = 0;
-        for (int i = 0; i < 10; i++)
-        {
-            a += 0.1f;
-            loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
-            yield return new WaitForSeconds(0.01f);
-        }
+        loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, 0);
+        loader.DOFade(1, 0.5f);
+        yield return new WaitForSeconds(0.5f);
 
         level = 1;
         isPlaying = true;
@@ -176,16 +165,13 @@ public class GameController : MonoBehaviour
         grid.transform.GetChild(2).gameObject.SetActive(false);
         CreateTask();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
-        a = 1;
-        for (int i = 0; i < 10; i++)
-        {
-            a -= 0.1f;
-            loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
-            yield return new WaitForSeconds(0.01f);
-        }
+        loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, 1);
+        loader.DOFade(0, 0.5f);
+        yield return new WaitForSeconds(0.5f);
         loader.gameObject.SetActive(false);
+        
     }
 
 
