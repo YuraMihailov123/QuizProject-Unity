@@ -22,22 +22,34 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
-
-    public GameObject cellPrefab;
+    public GameObject grid;
+    public GameObject taskLabel;
 
     public int level = 1;
 
     public List<GameObject> cellsInScene = new List<GameObject>();
 
+    public Sprite[] spritesSet;
+
     // Start is called before the first frame update
     void Start()
     {
-        //cellPrefab = Resources.Load<GameObject>("Prefabs/cell");
+        grid = transform.Find("Grid").gameObject;
+        taskLabel = transform.Find("Canvas").Find("task").gameObject;
         level = 1;
         cellsInScene = new List<GameObject>();
+
+
+        spritesSet = Resources.LoadAll<Sprite>("Sprites");
     }
 
-    public void GenerateObjectsInCells()
+    public void IncreaseLevel()
+    {
+        level++;
+
+    }
+
+    private void RepositionCells()
     {
         
     }
