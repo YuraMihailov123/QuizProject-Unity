@@ -31,11 +31,16 @@ public class GameController : MonoBehaviour
     public int level = 1;
 
     public string currentTask = "";
+
     public List<string> currentDataSet;
+
+    public List<Sprite> currentSpriteSet = new List<Sprite>();
 
     public List<GameObject> cellsInScene = new List<GameObject>();
 
     public Sprite[] spritesSet;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +52,14 @@ public class GameController : MonoBehaviour
 
         dataSource = Resources.Load<DataSource>("ScriptableObjects/DataSource");
         spritesSet = Resources.LoadAll<Sprite>("Sprites");
+
+
+        for(int i = 0; i < grid.transform.childCount; i++)
+        {
+            cellsInScene.Add(grid.transform.GetChild(i).transform.GetChild(0).gameObject);
+            cellsInScene.Add(grid.transform.GetChild(i).transform.GetChild(1).gameObject);
+            cellsInScene.Add(grid.transform.GetChild(i).transform.GetChild(2).gameObject);
+        }
 
         CreateTask();
     }
@@ -61,8 +74,25 @@ public class GameController : MonoBehaviour
         currentTask = currentDataSet[Random.Range(0,currentDataSet.Count)];
         currentDataSet.Remove(currentTask);
 
+        currentSpriteSet = GetCurrentSpriteSet(dataSet);
+
         taskLabel.GetComponent<Text>().text = "Find " + currentTask;
     }
+
+    private List<Sprite> GetCurrentSpriteSet(int dataSet) {
+        List<Sprite> list = new List<Sprite>();
+
+        int multiplier = dataSet - 1 < 0 ? 0 : dataSource.dataSetsSizes[dataSet - 1];
+        int setCount = dataSource.dataSetsSizes[dataSet];
+        int startIndex = dataSet * multiplier;
+        for (int i = startIndex; i <  + setCount; i++)
+        {
+            list.Add(spritesSet[i]);
+        }
+
+        return list;
+    }
+
 
     public void IncreaseLevel()
     {
