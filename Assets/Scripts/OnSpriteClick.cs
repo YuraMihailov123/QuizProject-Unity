@@ -41,6 +41,34 @@ public class OnSpriteClick : MonoBehaviour
         }
     }
 
+    IEnumerator BounceObjectWithCorrectTap()
+    {
+        float a = 1;
+        for (int i = 0; i < 10; i++)
+        {
+            a += 0.02f;
+            myObject.transform.localScale = new Vector3(a, a, a);
+            yield return null;
+            //yield return new WaitForSeconds(0.01f);
+        }
+        for (int i = 0; i < 20; i++)
+        {
+            a -= 0.02f;
+            myObject.transform.localScale = new Vector3(a, a, a);
+            yield return null;
+            //yield return new WaitForSeconds(0.01f);
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            a += 0.02f;
+            myObject.transform.localScale = new Vector3(a, a, a);
+            yield return null;
+            //yield return new WaitForSeconds(0.01f);
+        }
+
+        GameController.Instance.IncreaseLevel();
+    }
+
     IEnumerator EaseInBounce() {
 
         myObject.transform.localScale = new Vector3(1,1,1);
@@ -76,7 +104,7 @@ public class OnSpriteClick : MonoBehaviour
         if(GameController.Instance.currentTask == myObjectValue && GameController.Instance.isPlaying)
         {
             Debug.Log("YEP!");
-            GameController.Instance.IncreaseLevel();
+            StartCoroutine("BounceObjectWithCorrectTap");
         }
     }
 }
