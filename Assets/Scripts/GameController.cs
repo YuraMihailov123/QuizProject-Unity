@@ -94,8 +94,10 @@ public class GameController : MonoBehaviour
     public void FillCellsWithObjects()
     {
         int indexCellWithCorrectAnswer = Random.Range(0, level * 3 - 1);
+        Debug.Log(indexCellWithCorrectAnswer);
         cellsInScene[indexCellWithCorrectAnswer].transform.Find("object").GetComponent<SpriteRenderer>().sprite = currentSpriteSet[currentTaskIndex];
         cellsInScene[indexCellWithCorrectAnswer].GetComponent<OnSpriteClick>().myObjectValue = currentTask;
+        Debug.Log(indexCellWithCorrectAnswer);
         currentSpriteSet.RemoveAt(currentTaskIndex);
 
         for(int i = 0; i < level * 3; i++)
@@ -103,6 +105,7 @@ public class GameController : MonoBehaviour
             if (i == indexCellWithCorrectAnswer)
                 continue;
             int rndIndx = Random.Range(0, currentSpriteSet.Count);
+            Debug.Log(i + " - test");
             cellsInScene[i].transform.Find("object").GetComponent<SpriteRenderer>().sprite = currentSpriteSet[rndIndx];
             cellsInScene[i].GetComponent<OnSpriteClick>().myObjectValue = "";
             currentSpriteSet.RemoveAt(rndIndx);

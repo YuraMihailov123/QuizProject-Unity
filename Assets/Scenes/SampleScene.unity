@@ -10458,6 +10458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 0
   myObjectValue: 
 --- !u!61 &476621742
 BoxCollider2D:
@@ -10554,7 +10555,7 @@ PrefabInstance:
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
@@ -10622,7 +10623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266655185}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.2, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123878693}
@@ -10805,6 +10806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 1
   myObjectValue: 
 --- !u!61 &575332762
 BoxCollider2D:
@@ -10852,7 +10854,7 @@ PrefabInstance:
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
@@ -10920,7 +10922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127541941}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.4, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 476621740}
@@ -10980,6 +10982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 0
   myObjectValue: 
 --- !u!61 &626636304
 BoxCollider2D:
@@ -21003,6 +21006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 1
   myObjectValue: 
 --- !u!61 &843864817
 BoxCollider2D:
@@ -21099,7 +21103,7 @@ PrefabInstance:
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
@@ -21167,7 +21171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123773175}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.2, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624827904}
@@ -21226,7 +21230,7 @@ PrefabInstance:
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
@@ -21294,7 +21298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753787233}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.2, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2023877750}
@@ -26759,6 +26763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 0
   myObjectValue: 
 --- !u!61 &1624827906
 BoxCollider2D:
@@ -27016,7 +27021,7 @@ PrefabInstance:
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402710330785798858, guid: bf155d57bd9c24b95b1b6305d8b2e7a2,
         type: 3}
@@ -27084,7 +27089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52992761}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.4, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 626636302}
@@ -27219,6 +27224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 1
   myObjectValue: 
 --- !u!61 &2023877752
 BoxCollider2D:
@@ -27367,6 +27373,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6129135252917366092, guid: 093095a8ddf514e3fbcc5e9a84f8c125,
+        type: 3}
+      propertyPath: shouldBounceOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7954538309632632323, guid: 093095a8ddf514e3fbcc5e9a84f8c125,
         type: 3}
       propertyPath: m_Name
@@ -27428,6 +27439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911c9e1a1ace34e44a2515389ebb715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldBounceOnStart: 0
   myObjectValue: 
 --- !u!61 &2123878695
 BoxCollider2D:
@@ -32558,6 +32570,11 @@ PrefabInstance:
     - target: {fileID: 6129135252917366081, guid: 093095a8ddf514e3fbcc5e9a84f8c125,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129135252917366092, guid: 093095a8ddf514e3fbcc5e9a84f8c125,
+        type: 3}
+      propertyPath: shouldBounceOnStart
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7954538309632632323, guid: 093095a8ddf514e3fbcc5e9a84f8c125,

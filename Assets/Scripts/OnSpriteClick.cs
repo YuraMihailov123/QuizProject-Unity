@@ -9,20 +9,28 @@ public class OnSpriteClick : MonoBehaviour
     UnityEvent myEvent;
     GameObject myObject;
     ParticleSystem myParticleSystem;
+    public bool shouldBounceOnStart = true;
     public string myObjectValue = "";
 
     void Start()
     {
         myObject = transform.Find("object").gameObject;
         myParticleSystem = transform.Find("stars").GetComponent<ParticleSystem>();
-        transform.localScale = new Vector3(0, 0, 0);
+        
 
         if (myEvent == null)
             myEvent = new UnityEvent();
 
         myEvent.AddListener(Clicked);
 
-        StartCoroutine("BounceObject");
+        if (shouldBounceOnStart)
+        {
+            transform.localScale = new Vector3(0, 0, 0);
+            StartCoroutine("BounceObject");
+        }else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     IEnumerator BounceObject()
