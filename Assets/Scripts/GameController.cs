@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
             cellsInScene.Add(grid.transform.GetChild(i).transform.GetChild(2).gameObject);
         }
 
+        Resources.UnloadUnusedAssets();
         CreateTask();
     }
 
