@@ -7,6 +7,7 @@ public class OnSpriteClick : MonoBehaviour
 {
     UnityEvent myEvent;
     GameObject myObject;
+    public string myObjectValue = "";
 
     void Start()
     {
@@ -72,9 +73,9 @@ public class OnSpriteClick : MonoBehaviour
 
     void Clicked()
     {
-        Debug.Log("Clicked:" + gameObject.name);
-        if(gameObject.name == "button")
+        if(GameController.Instance.currentTask == myObjectValue && GameController.Instance.isPlaying)
         {
+            Debug.Log("YEP!");
             GameController.Instance.IncreaseLevel();
         }
     }
