@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     public GameObject taskLabel;
 
     public Image fader;
+    public Image loader;
 
     public DataSource dataSource;
 
@@ -53,6 +54,7 @@ public class GameController : MonoBehaviour
         grid = transform.Find("Grid").gameObject;
         taskLabel = transform.Find("Canvas").Find("task").gameObject;
         fader = transform.Find("Canvas").Find("fader").GetComponent<Image>();
+        loader = transform.Find("Canvas").Find("loader").GetComponent<Image>();
         level = 1;
         cellsInScene = new List<GameObject>();
         isPlaying = true;
@@ -158,17 +160,39 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         fader.gameObject.SetActive(false);
+
+        loader.gameObject.SetActive(true);
+        a = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            a += 0.1f;
+            loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        level = 1;
+        isPlaying = true;
+        grid.transform.GetChild(1).gameObject.SetActive(false);
+        grid.transform.GetChild(2).gameObject.SetActive(false);
+        CreateTask();
+
+        yield return new WaitForSeconds(0.5f);
+
+        a = 1;
+        for (int i = 0; i < 10; i++)
+        {
+            a -= 0.1f;
+            loader.color = new Color(fader.color.r, fader.color.g, fader.color.b, a);
+            yield return new WaitForSeconds(0.01f);
+        }
+        loader.gameObject.SetActive(false);
     }
 
 
     public void RestartGame()
     {
         StartCoroutine("CloseEndScreen");
-        level = 1;
-        isPlaying = true;
-        grid.transform.GetChild(1).gameObject.SetActive(false);
-        grid.transform.GetChild(2).gameObject.SetActive(false);
-        CreateTask();
+        
     }
 
 }

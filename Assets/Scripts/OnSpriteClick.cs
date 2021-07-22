@@ -7,11 +7,13 @@ public class OnSpriteClick : MonoBehaviour
 {
     UnityEvent myEvent;
     GameObject myObject;
+    ParticleSystem myParticleSystem;
     public string myObjectValue = "";
 
     void Start()
     {
         myObject = transform.Find("object").gameObject;
+        myParticleSystem = transform.Find("stars").GetComponent<ParticleSystem>();
         transform.localScale = new Vector3(1, 1, 1);
 
         if (myEvent == null)
@@ -43,6 +45,7 @@ public class OnSpriteClick : MonoBehaviour
 
     IEnumerator BounceObjectWithCorrectTap()
     {
+        myParticleSystem.Play();
         float a = 1;
         for (int i = 0; i < 10; i++)
         {
@@ -70,7 +73,7 @@ public class OnSpriteClick : MonoBehaviour
     }
 
     IEnumerator EaseInBounce() {
-
+        
         myObject.transform.localScale = new Vector3(1,1,1);
         yield return new WaitForSeconds(0.01f);
         myObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
@@ -89,6 +92,7 @@ public class OnSpriteClick : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         myObject.transform.localScale = new Vector3(1f, 1f, 1f);
 
+        
 
         yield return null;
     }
