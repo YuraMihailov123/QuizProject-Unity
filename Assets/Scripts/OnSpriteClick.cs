@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -73,28 +74,10 @@ public class OnSpriteClick : MonoBehaviour
     }
 
     IEnumerator EaseInBounce() {
-        
-        myObject.transform.localScale = new Vector3(1,1,1);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.99f, 0.99f, 0.99f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.94f, 0.94f, 0.94f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
-        yield return new WaitForSeconds(0.01f);
-        myObject.transform.localScale = new Vector3(1f, 1f, 1f);
 
         
-
-        yield return null;
+        yield return new WaitForSeconds(0.5f);
+        myObject.transform.DOScale(1, 0.5f);
     }
 
 
@@ -109,6 +92,10 @@ public class OnSpriteClick : MonoBehaviour
         {
             Debug.Log("YEP!");
             StartCoroutine("BounceObjectWithCorrectTap");
+        }else if (GameController.Instance.currentTask != myObjectValue && GameController.Instance.isPlaying)
+        {
+            //StartCoroutine("EaseInBounce");
+            myObject.transform.DOShakePosition(1,0.35f);
         }
     }
 }
