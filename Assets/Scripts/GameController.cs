@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
     public string currentTask = "";
 
     public List<string> currentDataSet;
+    public List<string> previousTasks;
 
     public List<Sprite> currentSpriteSet = new List<Sprite>();
 
@@ -58,6 +59,7 @@ public class GameController : MonoBehaviour
         loader = transform.Find("Canvas").Find("loader").GetComponent<Image>();
         level = 1;
         cellsInScene = new List<GameObject>();
+        previousTasks = new List<string>();
         isPlaying = true;
         dataSource = Resources.Load<DataSource>("ScriptableObjects/DataSource");
         spritesSet = Resources.LoadAll<Sprite>("Sprites");
@@ -82,6 +84,13 @@ public class GameController : MonoBehaviour
         
         currentTask = currentDataSet[Random.Range(0,currentDataSet.Count)];
         currentTaskIndex = currentDataSet.IndexOf(currentTask);
+
+        while (previousTasks.Contains(currentTask))
+        {
+            currentTask = currentDataSet[Random.Range(0, currentDataSet.Count)];
+            currentTaskIndex = currentDataSet.IndexOf(currentTask);
+        }
+        previousTasks.Add(currentTask);
         currentDataSet.Remove(currentTask);
 
         currentSpriteSet = GetCurrentSpriteSet(dataSet);
